@@ -1,1 +1,166 @@
 
+05-11-2023 Python Full Course
+00 - 9:00 Project Setup
+09:00-10:25 Hello World Programm
+
+!
+print("Hello World")
+!
+
+01. 09:27-15:00 Drawing shapes
+
+print("   /|")
+print("  / |")
+print(" /  |")
+print("/___|")
+
+
+
+15:01-24:20 Variables
+
+character_name = "John"
+character_age = "35"
+print("There once was a man named  " + character_name + ",")
+print("He was " + character_age + " years old.")
+print("He really liked the name " + character_name + ",")
+print("but didn't like being " + character_age + ".")
+
+24:25-26-55 Data Types
+
+num = 32
+print(type(num))
+floatNum = 32.5
+print(type(floatNum))
+
+
+boolean_num = True
+print(boolean_num)
+
+Working with strings 27:00-38:39
+
+check_case = "SALIEU"
+print(check_case.isupper())
+
+print(len(check_case))
+print(check_case[0])
+print(check_case.index("E"))
+
+Working with Numbers 38:40-48:20
+print(2)
+print(2.5 - .5)
+print(2 % 2)
+
+num = -1
+print(abs(num))
+
+
+print(pow(2, 4))
+print(max(1, 2))
+print(min(1, 2))
+print(round(2.4))
+print(round(2.5))
+print(round(2.6))
+
+from math import *
+print(floor(3.9))
+print(ceil(1.1))
+print(sqrt(25))
+print(sqrt(10))
+
+Getting input from users 48:29-52:30
+name = input("Enter your name: ")
+print("Hello " + name + " !")
+
+Basic Python Calculator 52:35-58:30
+num1 = input("Enter a number: ")
+num2 = input("Enter another number: ")
+
+result1 = int(num1) + int(num2)
+result2 = int(num1) - int(num2)
+result3 = int(num1) / int(num2)
+result4 = int(num1) % int(num2)
+
+print(result1)
+print(result2)
+print(result3)
+print(result4)
+
+07-11-2023 Mad Lib Game 58:31-1:02
+color = input("Enter a color: ")
+plural_noun = input("Enter a plural Noun: ")
+celebrity = input("Enter a celebrity: ")
+
+print("Roses are " + color)
+print(plural_noun + " are blue")
+print("I love " + celebrity)
+
+List 1:03-1:10:00
+friends = ["Kevin", "Karen", "Jim"]
+mixed_list = ["John Doe", 1, 1.2, True]
+#loop through list
+for i in mixed_list:
+    print(i)
+#return the 1st in the list
+print(friends[0])
+#from index 1 to the last
+print(mixed_list[1:])
+#from index 0 to the 2nd item
+print(mixed_list[:2])
+#modified any element from the list
+mixed_list[0] = "Jane Doe"
+print(mixed_list)
+
+1:10:05- Fxns to modified list
+lucky_numbers = [4, 8, 15, 16, 23, 42]
+friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
+#I can use extend to make one list
+friends.extend(lucky_numbers)
+print(friends)
+lucky_numbers.extend(friends)
+print(lucky_numbers)
+
+
+#add items to d end of the list
+friends.append("Salieu Jr.")
+lucky_numbers.append("98%")
+print(friends)
+print(lucky_numbers)
+
+#insert is used after an item from the list
+friends.insert(5, "Ibrahim")
+print(friends)
+#remove an item
+friends.remove("Jim")
+print(friends)
+#Clear removes all the items from the list
+friends.clear()
+print(friends)
+
+#Pop removes the last item
+friends.append("Kyle")
+print(friends)
+friends.pop()
+print(friends)
+
+friends = ["Kevin", "Karen", "Jim", "Oscar", "Salieu Jr."]
+#check for index of an item
+print(friends.index("Salieu Jr."))
+
+friends = ["Kevin", "Karen", "Jim", "Oscar", "Salieu Jr.", "Salieu Jr."]
+#how many times a value is in the list
+print(friends.count("Salieu Jr."))
+
+#sort the list in ascending order
+friends.sort()
+print(friends)
+
+lucky_numbers = [4, 8, 5, 16, 23, 42]
+lucky_numbers.sort()
+print(lucky_numbers)
+#reverse the list
+lucky_numbers.reverse()
+print(lucky_numbers)
+
+
+
+
