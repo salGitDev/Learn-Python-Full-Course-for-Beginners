@@ -110,7 +110,7 @@ print(mixed_list[:2])
 mixed_list[0] = "Jane Doe"
 print(mixed_list)
 
-1:10:05- Fxns to modified list
+1:10:05-18:55 Fxns to modified list
 lucky_numbers = [4, 8, 15, 16, 23, 42]
 friends = ["Kevin", "Karen", "Jim", "Oscar", "Toby"]
 #I can use extend to make one list
@@ -162,5 +162,167 @@ lucky_numbers.reverse()
 print(lucky_numbers)
 
 
+#copy from alsist
+friends = ["Kevin", "Karen", "Jim", "Oscar", "Salieu Jr.", "Salieu Jr."]
+friend_copy = friends.copy()
+print(friend_copy)
+
+08-11-2023 Tuples 1:18:56-1:24:15
+coordinates = (4, 5)
+print(coordinates)
+print(coordinates[1])
+#immutable i.e
+coordinates[1] = 10
+#This code throws error
+
+Functions 1:13:17-1:40:00
+#Simple function
+
+def say_hi():
+    print("Hello User")
+say_hi()
+
+def say_hi(name):
+    print("Hello " + name)
+say_hi("Salieu Jr.")
+
+def say_hi(name, age):
+    print("Hello " + name + " you're " + age + " months old")
+say_hi("Salieu Jr.", "9")
 
 
+def cube(num):
+    return num * num * num
+print(cube(3))
+
+If Statements 1:40:06-1:54:00
+
+is_male = True
+if is_male:
+    print("You're a male")
+else:
+    print("You're not a male")
+
+#two conditions true
+is_male = True
+is_tall = True
+if is_male or is_tall:
+    print("You're a male or tall or both")
+else:
+    print("You're neither male or tall")
+
+#one condition is false
+is_male = False
+is_tall = True
+if is_male or is_tall:
+    print("You're a male or tall or both")
+else:
+    print("You're neither male or tall")
+
+#both condition false
+is_male = False
+is_tall = False
+if is_male or is_tall:
+    print("You're a male or tall or both")
+else:
+    print("You're neither male or tall")
+
+
+
+
+
+#both condition false
+is_male = False
+is_tall = False
+if is_male and is_tall:
+    print("You're a tall male")
+elif is_male and not(is_tall):
+    print("You're a short male")
+elif not(is_male) and is_tall:
+    print("You're not male and you're tall")
+else:
+    print("You're either not male or not tall or both")
+
+
+
+If statements and comparison 1:54:05-2:00:30
+
+
+def max_num(num1, num2, num3):
+    if num1 >= num2 and num1 >= num3:
+        return num1
+    elif num2 >= num1 and num2 >= num3:
+        return num2
+    else:
+        return num3
+print(max(3, 4, 5))
+
+
+Building a better calculator 2:00:39-2:07:11
+num1 = float(input("Enter first number: "))
+operator = input("Enter an operator: ")
+num2 = float(input("Enter second number: "))
+if operator == "+":
+    print(num1 + num2)
+elif operator == "-":
+    print(num1 - num2)
+elif operator == "*":
+    print(num1 * num2)
+elif operator == "/":
+    print(num1 / num2)
+else:
+    print("Invalid operator")
+
+Dictionaries 02:07:14-02:14:10
+#programme to convert a 3 digit month name to full month name
+month_Conversions = {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sep": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+}
+#test
+print(month_Conversions)
+print(month_Conversions["Jan"])
+print(month_Conversions.get("Dec"))
+print(month_Conversions.get("Not found"))
+
+While Loop 02:14:16-02:20:00
+
+i = 1
+while i <= 10:
+    print(i)
+    i = i + 1
+
+Building guessing game 02:20:03-
+
+secret_word = "giraffe"
+guess = ""
+while guess != secret_word:
+    guess = input(("Enter a guess word: "))
+print("You win the guess")
+
+
+
+# x tries of guess
+secret_word = "giraffe"
+guess = ""
+guess_count = 0
+guess_limit = 3
+outOf_guesses = False
+
+while guess != secret_word:
+    if guess_count < guess_limit:
+    guess = input(("Enter a guess word: "))
+    guess_count = guess_count + 1
+else:
+    outOf_guesses = True
+print("You win the guess")
