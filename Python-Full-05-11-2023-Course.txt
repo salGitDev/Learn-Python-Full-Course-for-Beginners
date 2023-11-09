@@ -302,7 +302,7 @@ while i <= 10:
     print(i)
     i = i + 1
 
-Building guessing game 02:20:03-
+Building guessing game 02:20:03-02:32:40
 
 secret_word = "giraffe"
 guess = ""
@@ -319,10 +319,64 @@ guess_count = 0
 guess_limit = 3
 outOf_guesses = False
 
-while guess != secret_word:
+while guess != secret_word and not(outOf_guesses):
     if guess_count < guess_limit:
-    guess = input(("Enter a guess word: "))
-    guess_count = guess_count + 1
+        guess = input("Enter a guess word: ")
+        guess_count += 1
+    else:
+      outOf_guesses = True
+if outOf_guesses:
+   print("Out of guesses, You loose1")
 else:
-    outOf_guesses = True
-print("You win the guess")
+ print("You win the guess")
+
+#Algorithms for the Guess Game
+!
+Name: Guess game
+
+1. targer giraffe (secret_word)
+2. Guess i.e guess to meet the target (guess)
+3. Guess limit i.e guess max (guess_limit)
+4. Guess count i.e the guess use a while from (guess) to (guess_limit)
+5. Exit the program i.e set a variable to false if 1 or 3 are met
+!
+
+09-11-2023 For Loop 02:32:46-02:41:20
+for letter in "Giraffe Academy":
+    print(letter)
+
+friends = ["Jim", "Karen", "Kevin"]
+for friend in friends:
+    print(friend)
+
+for index in range(20):
+    print(index)
+
+for index in range(15, 20):
+    print(index)
+    print(len(friends))
+
+for index in range(5):
+    if index == 0:
+        print("Outputing 1st iteration of the loop")
+    elif index == 1:
+        print("Outputing 2nd iteration of the loop")
+    elif index == 2:
+        print("Outputing 3rd iteration of the loop")
+    elif index == 3:
+        print("Outputing 4th iteration of the loop")
+    else:
+        print("Outputing 5th or last iteration of the loop")
+
+Exponent Fnx 02:41:22-02;47:05
+print(2**3)
+
+def raise_to_power(base_num, pow_num):
+    result = 1
+    for index in range(pow_num):
+        result = result * base_num
+    return result
+print(raise_to_power(3, 2))
+
+
+
